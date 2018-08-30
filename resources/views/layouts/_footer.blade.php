@@ -7,7 +7,7 @@
 
         <nav>
             <ul>
-                <li><a href="/about">关于</a></li>
+                <li><a href="{{route('about')}}">关于</a></li>
             </ul>
         </nav>
     </footer>
