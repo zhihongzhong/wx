@@ -14,7 +14,7 @@
                 <div class="form-group">
                     <label for="username" class="control-label col-md-2">username:</label>
                     <div class="col-md-10">
-                        <input type="text" name="username" class="form-control" id="username" holderplace="enter your name here" value="{{old('username')}}">
+                        <input type="text" name="name" class="form-control" id="username" holderplace="enter your name here" value="{{old('username')}}">
                     </div>
                 </div>
                 <div class="form-group">
