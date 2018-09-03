@@ -26,5 +26,11 @@ class SessionsController extends Controller
             return redirect()->back();
         }
     }
+
+    protected function destory(){
+        
+        Auth::logout();
+        redirect()->route('login');
+    }
     
 }
