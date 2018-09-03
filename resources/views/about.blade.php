@@ -1,4 +1,4 @@
-@extends('layouts._header')
+@extends('layouts.default')
 @section('title','about')
 @section('content')
 <h1>about</h1>

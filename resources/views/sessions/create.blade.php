@@ -25,6 +25,11 @@
                         <input type="password" name="password" class="form-control">
                     </div>
                 </div>
+                
+                <div class="checkbox">
+                    <label><input type="checkbox" name="remember">remember me</label>
+                </div>
+
                 <button type="submit" class="btn btn-primary">submit</button>
             </form>
 
