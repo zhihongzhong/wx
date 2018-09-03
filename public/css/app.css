@@ -8440,6 +8440,16 @@ ul .slogon {
   font-weight: bold;
 }
 
+.alert-list {
+  float: none;
+  list-style: square;
+}
+
+.alert-list li {
+  float: none;
+  margin-left: 0px;
+}
+
 input,
 textarea,
 select,
@@ -8454,5 +8464,13 @@ input {
 
 .panel {
   margin-top: 50px;
+}
+
+#logout {
+  cursor: default;
+}
+
+#logout:hover {
+  background-color: transparent;
 }
 

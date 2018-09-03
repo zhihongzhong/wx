@@ -9,7 +9,7 @@
         </div>
         <div class="panel-body">
             @include('shared._errors')
-            <form class="form-horizontal" method="post" action="{{route('login')}}" >
+            <form method="post" action="{{route('login')}}" >
                 {{csrf_field()}}
 
                 <div class="form-group">

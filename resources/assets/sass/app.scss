@@ -91,7 +91,16 @@ ul{
         font-weight: bold;
     }
 }
+.alert-list{
+    float:none;
+    list-style: square;
 
+    li{
+        float:none;
+        margin-left: 0px;
+    }
+    
+}
 input, textarea, select, .uneditable-input{
     border:1px solid #bbb;
     margin-bottom:15px;
@@ -103,4 +112,11 @@ input {
 
 .panel{
     margin-top:50px;
+}
+
+#logout{
+    cursor:default;
+    &:hover{
+        background-color: transparent;
+    }
 }

@@ -1,27 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@yield('title')</title>
-    <link rel="stylesheet" href="/css/app.css">
-    <!-- <link rel="stylesheet" href="/css/common.css"> -->
-</head>
-<body>
 <header class="navbar navbar-fixed-top navbar-inverse">
     <div class="nav-container">
         <div class="col-md-offset-1 col-md-10">
             <a href="{{route('home')}}" id="logo">Sample App</a>
             <nav>
                 <ul class="nav navbar-nav navbar-right">
+                @if(Auth::check())
+                    <li><a href="#">用户列表</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" date-toggle="dorpdown">
+                            {{Auth::user()->name}}
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">edit profile</a></li>
+                            <li class="divider"></li>
+                            <li>
+                                <a id="logout" href="#">
+                                    <form action="{{route('logout')}}" method="POST">
+                                        {{csrf_field()}}
+                                        {{method_field('DELETE')}}
+                                        <button class="btn btn-block btn-danger" type="submit" name="button">logout</button>
+                                    </form>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                @else
                     <li><a href="{{route('help')}}">帮助</a></li>
-                    <li><a href="#">登陆</a></li>
+                    <li><a href="{{route('login')}}">登陆</a></li>
+                @endif
                 </ul>
             </nav>
         </div>
     </div>
 </header>
-    
-</body>
-</html>

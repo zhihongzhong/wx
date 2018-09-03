@@ -14,15 +14,17 @@ class SessionsController extends Controller
     }
 
     protected function store(Request $request){
+
         $credentials =$this->validate($request,[
-            'email'=>'required|email|min:8:max:20',
+            'email'=>'required|email|min:8:max:255',
             'password'=>'required']);
         if(Auth::attempt($credentials)){
-            return redirect()->route('users.show',[Auth::user()]);
             session()->flash('success','welcome back');
+            return redirect()->route('users.show',[Auth::user()]);
         }else{
+            session()->flash('danger','incorrect account or password');
             return redirect()->back();
-            session()->flash('error','incorrect account or password');
         }
     }
+    
 }
